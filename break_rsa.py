@@ -5,7 +5,7 @@ from Crypto.Util.number import inverse
 from math import gcd
 
 
-file_public_key = input("Entrer le chemin de la clé publique: ")
+file_public_key = input("Enter the path of the public key file: ")
 
 with open(file_public_key, "r") as f:
     key = RSA.importKey(f.read())
@@ -34,4 +34,4 @@ private_key_file = "private_key.pem"
 with open(private_key_file, "wb") as f:
     f.write(private_key_pem)
 
-print(f"Clé privée générée et sauvegardée dans '{private_key_file}'")
+print(f"Private key generated and put in '{private_key_file}'")
